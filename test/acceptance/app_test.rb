@@ -68,7 +68,7 @@ class AppTest < ActiveSupport::TestCase
   end
 
   setup do
-    generator.generate_if_missing
+    generator.generate_if_missing 
     generator.install_spring
     generator.copy_to(app.root)
   end

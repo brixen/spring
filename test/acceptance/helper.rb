@@ -329,8 +329,9 @@ module Spring
       end
 
       def copy_to(path)
-        FileUtils.rm_rf(path.to_s)
+        FileUtils.rm_rf(path.to_s) 
         FileUtils.cp_r(application.root.to_s, path.to_s)
+        puts `find #{path} | egrep -v 'vendor/gems|user_home'`
       end
     end
   end
